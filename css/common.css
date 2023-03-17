@@ -11,7 +11,9 @@
   font-family: 'Krub', sans-serif;
 
 }
-
+html{
+  transition: all 250ms ease;
+}
 #Darkbutton{
   color: var(--background-contrast);
   cursor: pointer;
@@ -23,6 +25,7 @@ ul{
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
   width: 100vw;
   height: 100vh;
