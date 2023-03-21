@@ -2,11 +2,7 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 console.log(galleryItems);
 
-// se toman las imagenes y se importan ⬆️
-
 const gallery = document.querySelector('.gallery');
-
-// se crea la funcion para crear la galeria y los elementos ⬇️
 
 function createGallery(items) {
   return items
@@ -23,25 +19,12 @@ function createGallery(items) {
     </li>`)
     .join("");
 
-// uso el JOIN para que todas las imagenes esten dentro de una misma matriz 
-// ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
 }
-
-// ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
-// se crea la constante para añadir la galeria dentro del HTML usando el innerHTML ⬇️
-
 const addGallery = createGallery(galleryItems);
 
 gallery.innerHTML = addGallery;
 
 gallery.addEventListener ('click', clickOnImage);
-
-// ⬆️⬆️⬆️
-
-// ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
-
-// se define la funcion, de que cuando se haga click en ella 
-// abra la imagen dentro de un modal ⬇️⬇️
 
 function clickOnImage(imageAction) {
 
@@ -56,8 +39,6 @@ function clickOnImage(imageAction) {
   `);
   instance.show();
 
-  // se agrega un eventlistener; que cuando se pulse la tecla ESCAPE se cierre la imagen que esta previamente en pantalla completa 
-
   gallery.addEventListener("keydown", (imageAction) => {
     if (imageAction.code === "Escape") {
       instance.close();
@@ -65,7 +46,6 @@ function clickOnImage(imageAction) {
   })
 
 }
-
 
 function action(imageAction) {
   imageAction.preventDefault();
